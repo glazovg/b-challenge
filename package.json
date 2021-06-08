@@ -15,5 +15,15 @@
   "bugs": {
     "url": "https://github.com/glazovg/bitso-challenge/issues"
   },
-  "homepage": "https://github.com/glazovg/bitso-challenge#readme"
+  "homepage": "https://github.com/glazovg/bitso-challenge#readme",
+  "dependencies": {
+    "@wdio/cli": "^7.7.3"
+  },
+  "devDependencies": {
+    "@rpii/wdio-html-reporter": "^7.0.0",
+    "@wdio/local-runner": "^7.7.3",
+    "@wdio/mocha-framework": "^7.7.3",
+    "@wdio/selenium-standalone-service": "^7.7.3",
+    "@wdio/spec-reporter": "^7.7.3"
+  }
 }
