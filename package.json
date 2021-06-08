@@ -1,0 +1,19 @@
+{
+  "name": "bitso-challenge",
+  "version": "1.0.0",
+  "description": "Bitso automation challenge",
+  "main": "index.js",
+  "scripts": {
+    "test": "npx wdio run ./wdio.conf.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/glazovg/bitso-challenge.git"
+  },
+  "author": "Guillermo Lazo",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/glazovg/bitso-challenge/issues"
+  },
+  "homepage": "https://github.com/glazovg/bitso-challenge#readme"
+}
