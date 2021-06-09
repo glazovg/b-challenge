@@ -21,11 +21,11 @@ class Register extends Page {
         await (await this.webElements()).passwordInput.setValue(password)
         await (await this.webElements()).passwordConfirmation.setValue(password)
         await (await this.webElements()).registerCheckBox[0].scrollIntoView()
-        await browser.execute("arguments[0].click()", (await this.webElements()).registerCheckBox[0])
-        await browser.execute("arguments[0].click()", (await this.webElements()).registerCheckBox[2])
-        if (country === 'Mexico') await browser.execute("arguments[0].click()", (await this.webElements()).registerCheckBox[3])
+        await this.clickElement((await this.webElements()).registerCheckBox[0])
+        await this.clickElement((await this.webElements()).registerCheckBox[2])
+        if (country === 'Mexico') await this.clickElement((await this.webElements()).registerCheckBox[3])
         await (await this.webElements()).startButton.waitForEnabled()
-        await browser.execute("arguments[0].click()", (await this.webElements()).startButton)
+        await this.clickElement((await this.webElements()).startButton)
     }
 
     async verifyCode(code) {

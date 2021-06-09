@@ -8,7 +8,7 @@ const mailslurp = new MailSlurp({ apiKey });
 let inbox;
 
 dataSet.forEach(data => {
-    describe('Register page', () => {
+    describe.skip('Register page', () => {
         after(async () =>{
             await browser.reloadSession()
         })
