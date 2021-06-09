@@ -4,7 +4,8 @@ export default class Page {
     }
 
     async webElements() {
-        const profileMenu = await $('.styles__WrapperLabel-sc-1wdqgcn-1=Profile')
+        //const profileMenu = await $('.styles__WrapperLabel-sc-1wdqgcn-1=Profile')
+        const profileMenu = await $('.moon-user_avatar')
         const logoutButton = await $('[href="/logout"]')
         return { profileMenu, logoutButton }
     }
@@ -20,6 +21,7 @@ export default class Page {
     async bitsoLogout() {
         await (await this.webElements()).profileMenu.waitForDisplayed()
         await (await this.webElements()).profileMenu.moveTo()
+        await (await this.webElements()).logoutButton.waitForDisplayed()
         await (await this.webElements()).logoutButton.click()
     }
 }

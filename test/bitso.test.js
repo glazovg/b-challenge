@@ -14,9 +14,14 @@ let inbox;
 dataSet.forEach(data => {
     describe('Bitso page', () => {
         before(async () => {
+            await browser.maximizeWindow()
+        })
+        after(async () => {
+            await browser.reloadSession()
+        })
+        it(`Adding a beneficiary - ${data.scenario}`, async () => {
             LoginPage.open()
             LoginPage.login(data.email, data.password)
-            console.log('\x1b[32m%s\x1b[0m', `IS AUTH DISPLAYED ${await LoginPage.isAuthNewDeviceMessageDisplayed()}`)
             if (await LoginPage.isAuthNewDeviceMessageDisplayed()) {
                 const email = await mailslurp.waitForLatestEmail(data.inboxId);
                 const regex = RegExp('https:\/\/devmalta\.bitso\.com\/auth_device\/[a-zA-Z0-9]*')
@@ -24,15 +29,12 @@ dataSet.forEach(data => {
                 console.log('\x1b[32m%s\x1b[0m', `AUTH URL: ${authPath}`)
                 page.open(authPath)
             }
-        })
-        after(async () => {
-            await page.bitsoLogout()
-            await browser.reloadSession()
-        })
-        it(`Adding a beneficiary - ${data.scenario}`, async () => {
             WalletPage.open()
-            WalletPage.cryptoDeposit(1)
             await browser.pause(3000)
+            await WalletPage.cryptoDeposit(1)
+            expect((await WalletPage.webElements()).alertDepositMessage).toBeDisplayed()
+            await browser.pause(5000)
+            await browser.keys('Escape')
         })
     })
 });
