@@ -1,0 +1,12 @@
+[
+    {
+        "scenario": "User from Mexico",
+        "country": "Mexico",
+        "password": "Automation-1"
+    },
+    {
+        "scenario": "User from Argentina",
+        "country": "Argentina",
+        "password": "Automation-2"
+    }
+]
