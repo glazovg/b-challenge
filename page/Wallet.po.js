@@ -13,7 +13,6 @@ class Wallet extends Page {
     }
     //Crypto options goes from 1 to 9
     async cryptoDeposit(cryptoOption) {
-        await (await this.webElements()).cryptoCurrency[cryptoOption].waitForExist({ timeout: 6000 })
         await this.clickElement((await this.webElements()).cryptoCurrency[cryptoOption])
         await (await this.webElements()).depositButton.waitForDisplayed()
         await this.clickElement((await this.webElements()).depositButton)

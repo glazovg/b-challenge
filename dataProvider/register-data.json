@@ -1,9 +1,30 @@
 [
     {
+        "scenario": "User from Mexico",
+        "country": "Mexico",
+        "email": "85f05273-716a-422e-8cb8-b35131d62957@mailslurp.com",
+        "password": "Automation-1",
+        "inboxId": "85f05273-716a-422e-8cb8-b35131d62957",
+        "beneficiaryName": "Emmet",
+        "beneficiaryLastName": "Brown",
+        "beneficiarySecondLastName": "Brown",
+        "dateOfBirth": "11/05/1955",
+        "relationshipOption": "Relative",
+        "benefitPercentage": "100",
+        "pin":"92871"
+    },
+    {
         "scenario": "User from Argentina",
         "country": "Argentina",
         "email": "2d3acb3e-c2c0-4c73-bb33-941235a5d386@mailslurp.com",
         "password": "Automation-2",
-        "inboxId": "2d3acb3e-c2c0-4c73-bb33-941235a5d386"
+        "inboxId": "2d3acb3e-c2c0-4c73-bb33-941235a5d386",
+        "beneficiaryName": "Marty",
+        "beneficiaryLastName": "McFly",
+        "beneficiarySecondLastName": "McFly",
+        "dateOfBirth": "10/26/1985",
+        "relationshipOption": "Relative",
+        "benefitPercentage": "100",
+        "pin":"27849"
     }
 ]
